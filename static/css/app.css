@@ -1,0 +1,143 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white;
+}
+.container{
+    position: relative;
+    margin-top: 30px;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 20px;
+}
+.card{
+    width: 100%;
+    background-color: white;
+    position: relative;
+}
+.img-card{
+    position: relative;
+    width: 100%;
+    height: 310px;
+    overflow: hidden;
+
+}
+.img-product{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+    transform-origin: right;
+
+}
+.img-product:hover{
+    transform: scale(1.25);
+}
+.action{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.action-item {
+    position: relative;
+    list-style: none;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    cursor: pointer;
+    transform: translateX(60px);
+    transition: all 0.4s ease-in;
+
+}
+.action-item:nth-child(2){
+    transition-delay: 0.15s;
+}
+.action-item:nth-child(3){
+    transition-delay: 0.30s;
+}
+.card:hover .action-item{
+    transform: translateX(0px);
+
+}
+.action .action-item:hover{
+    background-color: red;
+    color: white;
+}
+.action .action-item span{
+    position: absolute;
+    right: 50px;
+    top: 5px;
+
+    white-space: nowrap;
+    padding: 6px 6px;
+    background-color: #fff;
+    color: #333;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(90px);
+    transition: all 0.2s ease-out;
+
+
+}
+.action .action-item:hover span{
+    opacity: 1;
+    transform: translateX(0);
+    
+}
+.content-card{
+    padding-left: 15px;
+    padding-right: 1px;
+}
+.title-card{
+    padding-top: 15px;
+    padding-bottom:15px;
+}
+.price-rate{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price{
+    color: red;
+}
+.rate{
+    color: rgb(255, 196, 0);
+}
+.fas{
+
+}
+.fa-star{
+
+}
+.far{
+
+}
+.fas.fa-star{
+
+}
+.far.fa-star{
+
+}
